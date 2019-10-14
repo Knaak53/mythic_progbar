@@ -229,11 +229,11 @@ function ActionCleanup()
         end
     end
 
-    if mythic_action.prop.notDelete ~= true then
+    if mythic_action.prop.notDelete ~= true and mythic_action.prop ~= nil then
         DetachEntity(NetToObj(prop_net), 1, 1)
         DeleteEntity(NetToObj(prop_net))
     end
-    if mythic_action.propTwo.notDelete ~= true then
+    if mythic_action.propTwo.notDelete ~= true and mythic_action.prop ~= nil then
         DetachEntity(NetToObj(propTwo_net), 1, 1)
         DeleteEntity(NetToObj(propTwo_net))
     end
