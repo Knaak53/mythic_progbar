@@ -229,10 +229,14 @@ function ActionCleanup()
         end
     end
 
-    DetachEntity(NetToObj(prop_net), 1, 1)
-    DeleteEntity(NetToObj(prop_net))
-    DetachEntity(NetToObj(propTwo_net), 1, 1)
-    DeleteEntity(NetToObj(propTwo_net))
+    if mythic_action.prop.NotDelete ~= true true then
+        DetachEntity(NetToObj(prop_net), 1, 1)
+        DeleteEntity(NetToObj(prop_net))
+    end
+    if mythic_action.propTwo.NotDelete ~= true then
+        DetachEntity(NetToObj(propTwo_net), 1, 1)
+        DeleteEntity(NetToObj(propTwo_net))
+    end
     prop_net = nil
     propTwo_net = nil
     runProgThread = false
